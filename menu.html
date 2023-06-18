@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/thunderstrike" rel="stylesheet">
+    <link rel="stylesheet" href="footerCuestionario.css">
+    <link rel="stylesheet" href="styleFormulario.css">
+  <title>Menu</title>
+</head>
+<body>
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-inverse navbar-stick-static-top">
+            <div class="container">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="inicio.html">Inicio</a>
+          </li>
+          <li>
+              <a href="menu.html">Menu</a>
+          </li>
+          <li>
+              <li>
+              <a href="formulario.html">Formulario</a>
+          </li>
+          <li>
+              <a href="pedidorealizado.html">Resultado</a>
+          </li>
+          <li>
+            <a href="movies.html">Buscador de Peliculas</a>
+        </li>
+        <li>
+          <a href="calculadora.html">Calculadora</a>
+        </li>
+        <li>
+          <a href="Calc.Fisica.html">Fisica</a>
+        </li>
+        <li>
+         <a href="cuestionario.html">Cuestionario</a> 
+        </li>
+             </ul>
+            </div>
+        </nav>
+    </div>
+
+    <titulo>Menu del restaurante</titulo>
+
+    <style>
+        body {
+    background-color: black;
+    }
+    
+    h1{
+        color: blue;
+    }
+    th{
+        background-color: 	white;
+    }
+    table{
+        margin-left: auto;
+        background-color: red;
+    }
+    img{
+    height: 100px;
+    width: 100px;
+    }
+    titulo{
+            font-size: 15px;
+            color: blue;
+            text-align: center;                                       
+    }
+    
+    </style>
+    <div id="menu"></div>
+    <script type="text/javascript">
+        fetch ('menu.json')
+        .then(response => response.json())
+        .then(data =>{
+            const tabla =document.createElement('table');
+            tabla.innerHTML=`
+            <thead>
+                <tr>
+                    <th> categoria</th>
+                    <th> imagen </th>
+                    <th> nombre </th>
+                    <th> descripcion </th>
+                    <th> precio </th>
+                    <th> selecion </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>`;
+    document.getElementById('menu').appendChild(tabla);
+    Object.keys(data).forEach(categoria => {
+        data[categoria].forEach(producto =>{
+    const fila=document.createElement('tr');
+    fila.innerHTML=`
+    <td> ${categoria} </td>
+    <td><img src="${producto.imagen}" alt="${producto.name}"></td> 
+    <td> ${producto.nombre}</td>
+    <td> ${producto.descripcion}</td>
+    <td> ${producto.precio}</td>
+    <td><input type="checkbox" class="producto" data-precio=$
+        {producto.nombre}</td>`;
+        tabla.querySelector('tbody').appendChild(fila);
+            });
+        });
+    
+        const productos=document.querySelectorAll('.producto');
+        productos.forEach(producto=> {
+    producto.addEventListener('change', ()=> {
+        let suma =0;
+        producto.forEach(producto => {
+            if(producto.checked){
+                suma+= parseFloat(producto.dataset.precio);
+    
+            }
+        });
+        document.getElementById('resultado').innerHTML=`<h1>TOTAL:
+            $ ${suma.toFixed(2)}</h1>`;
+    
+    
+        });
+    
+    })
+        })
+        .catch(error=> console.error(error));
+    </script>
+    
+    
+    
+    <footer>
+       <center>
+        <div class="copyrigth">
+            <p>&copy;<span id="year">Derechos reservados.</span></p>
+        
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <a href="perfil.html">CONTACTAME</a>
+            <p>Si estas interesado en contactarme, puedes hacerlo a travez de cualquiera de las siguientes redes sociales.</p>
+            <p>Podras contactarme en cualquiera de estas apps:</p>
+            <p>Agregando solo un poco mas de informacion para que el texto se vea mucho mas ya que no se que mas agregarle...</p>
+            <div class="contact-links">
+            <a href="https://www.facebook.com/Sol_VC" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/miperfil" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/miperfil" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.discord.com/miperfil" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://www.twitch.com/miperfil" target="_blank"><i class="fab fa-twitch"></i></a>
+            </div>
+        </center>
+    
+    
+    
+    <script>
+    //este siguiente codigo es para que los enlaces se abran en una nueva pestaña
+    const redessociales= document.querySelectorAll('.contact-links');
+    redessociales.forEach(link =>{
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            window.open(link.href, '_blank');
+        });
+    });
+    
+    
+    
+     </script>
+    </footer>
+</body>
+</html>

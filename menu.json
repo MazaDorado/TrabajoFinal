@@ -1,0 +1,220 @@
+{"menu":[
+  {"id":1,
+ "nombre": "Hamburguesa",
+  "descripcion": "DobleCarne contocino, queso amarillo, Jalapeño",
+  "precio": 100,
+  "imagen": "img/hamburguesa.jpg"                
+},
+{"id":2,
+ "nombre": "Tacos",
+  "descripcion": "Carne de Bisteck, queso, CebollayCilantro",
+  "precio": 80,
+  "imagen": "img/tacos.jpg"                
+},
+{"id":3,
+ "nombre": "Tortas",
+  "descripcion": "DobleCarne, queso, Jamon",
+  "precio": 110,
+  "imagen": "img/tortas.jpg"                
+},
+{"id":4,
+ "nombre": "Sincronizadas",
+  "descripcion": "DobleCarne, queso, frijoles, CebollayCilantro",
+  "precio": 90,
+  "imagen": "img/sincronizadas.jpg"                
+},
+{"id":5,
+ "nombre": "PapaAsada",
+  "descripcion": "DobleCarne, queso amarillo, totopos",
+  "precio": 120,
+  "imagen": "img/PapaAsada.jpg"                
+},
+{"id":6,
+ "nombre": "Burritos",
+  "descripcion": "DobleCarne, queso, frijoles, aguacate",
+  "precio": 60,
+  "imagen": "img/burritos.jpg"                
+},
+{"id":7,
+ "nombre": "Pizza con Piña",
+  "descripcion": "Una pizza grande con piña",
+  "precio": 150,
+  "imagen": "img/7.jpg"                
+},
+{"id":8,
+ "nombre": "Pizza tradicional",
+  "descripcion": "Pizza de tamaño normal con pepperoni",
+  "precio": 90,
+  "imagen": "img/8.jpg"                
+},
+{"id":9,
+ "nombre": "Chilaquiles",
+  "descripcion": "Tortilla frita con salsa roja con queso y crema",
+  "precio": 120,
+  "imagen": "img/9.jpg"                
+},
+{"id":10,
+ "nombre": "Gorditas de chicharron",
+  "descripcion": "Gorditas con chicharron de puerco recien echo",
+  "precio": 50,
+  "imagen": "img/10.jpg"                
+},
+
+{"id":11,
+"nombre": "Enchiladas",
+ "descripcion": "Tortillas de masa con salsa roja o verde, con queso y frijoles(opcional)",
+ "precio": 80,
+ "imagen": "img/11.jpg"                
+},
+{"id":12,
+"nombre": "Empanadas de Jaiba",
+ "descripcion": "Empana rellena de pulpa de jaiba",
+ "precio": 60,
+ "imagen": "img/12.jpg"                
+},
+{"id":13,
+"nombre": "Milanesa de pollo",
+ "descripcion": "Trozo de milanesa de pollo",
+ "precio": 110,
+ "imagen": "img/13.jpg"                
+},
+{"id":14,
+"nombre": "Nugets de pollo",
+ "descripcion": "Nugets de pollo con cualquier salsa(solo una)",
+ "precio": 90,
+ "imagen": "img/14.jpg"                
+},
+{"id":15,
+"nombre": "Coctel Mixto",
+ "descripcion": "Coctel con camaron,pulpo,ostiones y sus galletas saladas",
+ "precio": 140,
+ "imagen": "img/coctel.jpg"                
+},
+{"id":16,
+"nombre": "Pescado al mojo de ajo",
+ "descripcion": "Pescado frito con ajo",
+ "precio": 100,
+ "imagen": "img/pez.jpg"                
+},
+{"id":17,
+"nombre": "Camarones con chipotle",
+ "descripcion": "Camarones fritos bañados en salsa chipotle",
+ "precio": 150,
+ "imagen": "img/camarones.jpg"                
+},
+{"id":18,
+"nombre": "Chicharron en salsa verde",
+ "descripcion": "Chicharron bañado en salsa verde",
+ "precio": 50,
+ "imagen": "img/chicharron.jpg"                
+},
+{"id":19,
+"nombre": "Quesadillas",
+ "descripcion": "Quesadilla de queso",
+ "precio": 20,
+ "imagen": "img/quesadilla.jpg"                
+},
+{"id":20,
+"nombre": "Caldo de Camaron",
+ "descripcion": "Caldo con camarones y nuestro toque personal",
+ "precio": 160,
+ "imagen": "img/caldo.jpg"                
+}
+],
+"Complementos":[
+{"id":21,
+"nombre": "Mas piña",
+ "descripcion": "Piña fresca",
+ "precio": 20,
+ "imagen": "img/piña.jpg"                
+},
+{"id":22,
+"nombre": "Salsa ranch",
+ "descripcion": "Salsa ranch echa por nosotros",
+ "precio": 22,
+ "imagen": "img/ranch.jpg"                
+},
+{"id":23,
+"nombre": "Queso con tocinp",
+ "descripcion": "Queso con tocino echo por nosotros",
+ "precio": 50,
+ "imagen": "img/tocino.jpg"                
+},
+{"id":24,
+"nombre": "Salsa de Tomate",
+ "descripcion": "Salsa de tomate echa por nosotros",
+ "precio": 15,
+ "imagen": "img/tomate.jpg"                
+},
+{"id":25,
+"nombre": "Tortillas de masa",
+ "descripcion": "tortillas de masa echa al momento",
+ "precio": 24,
+ "imagen": "img/masa.jpg"                
+}
+],
+"Postres":[
+{"id":26,
+ "nombre": "MalteadaDeFresa",
+  "descripcion": "Fresa,Leche,cremabatida",
+  "precio": 50,
+  "imagen": "img/MalteadaDeFresa.jpg"                
+},
+{"id":27,
+ "nombre": "Flan",
+  "descripcion": "Vainilla,azucar,huevos,lechecondensada ",
+  "precio": 30,
+  "imagen": "img/Flan.jpg"                
+},
+{"id":18,
+ "nombre": "PayDeQueso",
+  "descripcion": "QuesoDobleCrema,huevos,mantequilla,galletasMaria",
+  "precio": 39,
+  "imagen": "img/PayDeQueso.jpg"                
+},
+{"id":29,
+ "nombre": "CarlotaDeOreo",
+  "descripcion": "GalletaOreo,YoghurtNatural,Creatina,Vainilla",
+  "precio": 30,
+  "imagen": "img/CarlotaDeOreo.jpg"                
+},
+{"id":30,
+ "nombre": "Helado de Vainilla",
+  "descripcion": "Grandioso helado sabor vainilla",
+  "precio": 22,
+  "imagen": "img/helado.jpg"                
+}
+],
+"Bebidas":[
+{"id":31,
+ "nombre": "Boing de Mango",
+  "descripcion": "Jugo con extracto de Mango Natural",
+  "precio": 21,
+  "imagen": "img/boing.jpg"                
+},
+{"id":32,
+ "nombre": "Coca Cola",
+  "descripcion": "Refresco refrescante de Coca Cola",
+  "precio": 17,
+  "imagen": "img/cocacola.jpg"                
+},
+{"id":33,
+ "nombre": "Pepsi",
+  "descripcion": "Refresco para quitar la sed",
+  "precio": 15,
+  "imagen": "img/pepsi.jpg"                
+},
+{"id":34,
+ "nombre": "Jugo del Valle sabor Naranja",
+  "descripcion": "Jugo con extracto de Naranja Natural",
+  "precio": 20,
+  "imagen": "img/jugodelvalle.jpg"                
+},
+{"id":35,
+ "nombre": "Squirt",
+  "descripcion": "Refresco sabor a Toronja",
+  "precio": 22,
+  "imagen": "img/squirt.jpg"                
+}
+]
+}

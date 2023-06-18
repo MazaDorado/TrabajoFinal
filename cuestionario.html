@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/thunderstrike" rel="stylesheet">
+    <link rel="stylesheet" href="styleCuestionario.css">
+    <link rel="stylesheet" href="footerCuestionario.css">
+  <title>Cuestionario</title>
+</head>
+<body>
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-inverse navbar-stick-static-top">
+            <div class="container">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="inicio.html">Inicio</a>
+          </li>
+          <li>
+              <a href="menu.html">Menu</a>
+          </li>
+          <li>
+              <li>
+              <a href="formulario.html">Formulario</a>
+          </li>
+          <li>
+              <a href="pedidorealizado.html">Resultado</a>
+          </li>
+          <li>
+            <a href="movies.html">Buscador de Peliculas</a>
+        </li>
+        <li>
+          <a href="calculadora.html">Calculadora</a>
+        </li>
+        <li>
+          <a href="Calc.Fisica.html">Fisica</a>
+        </li>
+        <li>
+         <a href="cuestionario.html">Cuestionario</a> 
+        </li>
+             </ul>
+            </div>
+        </nav>
+    </div>
+<div class="container">
+  <div class="quiz-container" id="quiz">
+    <div class="quiz-header">
+      <div class="image-container">
+        <img src="broly.jpg" alt="imagen" id="question-image" style="width: 250px; height:auto;">
+      </div>
+      <h2 id="question">Question text </h2>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="a" class="answer">
+          <label for="a" id="a_text">Question</label>
+        </li>
+                <li>
+          <input type="radio" name="answer" id="b" class="answer">
+          <label for="b" id="b_text">Question</label>
+        </li>
+                <li>
+          <input type="radio" name="answer" id="c" class="answer">
+          <label for="c" id="c_text">Question</label>
+        </li>
+                <li>
+          <input type="radio" name="answer" id="d" class="answer">
+          <label for="d" id="d_text">Question</label>
+        </li>
+      </ul>
+    </div>
+    <button id="submit">Siguiente</button>
+  </div>
+</div>
+<style>
+  body{
+        align-items: center;
+        justify-content: center;
+        overflow: 0;
+        margin: 0;
+
+    }
+    .quiz-container{
+        background-color: red;
+        background-image: linear-gradient(315deg, violet 0%, blueviolet 100% );
+        border-radius: 10px;
+        box-shadow: 0 0 20px 2px  black;
+        width: 400px;
+        overflow: hidden;
+    }
+    .quiz-header{
+        padding: 15px;
+    }
+    h2{
+        padding: 10px;
+        text-align: center;
+        margin: 0;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    ul li{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    ul li label{
+        cursor: pointer;
+    }
+    button{
+        background-color: black;
+        color: azure;
+        border: none;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 20px;
+    }
+    button:hover{
+        background-color: blue;
+    }
+    button:focus{
+        outline: none;
+        background-color: blue;
+    }
+</style>
+<script>
+  const quizData = [
+    {
+      question: "¿quien gana en una pelea de los siguientes personajes?",
+      image:"quiz1.jpg",
+      a: "Superman",
+      b:"goku",
+      c:"Batman",
+      d:"Dios",
+      correct:"d",
+    },
+    {
+      question: "¿como se llama el Protagonista de Bleach?",
+      image:"quiz1.jpg",
+      a: "Naruto",
+      b:"zelda",
+      c:"Ichigo",
+      d:"mario",
+      correct:"c",
+    },
+    {
+      question: "¿que raza es Goku",
+      image:"quiz1.jpg",
+      a: "Kriptoniano",
+      b:"Humano",
+      c:"Demonio",
+      d:"Sayayin",
+      correct:"d",
+    },
+    {
+      question: "¿Quien es el hijo de Dios?",
+      image:"quiz1.jpg",
+      a: "Superman",
+      b:"goku",
+      c:"Batman",
+      d:"Jesus",
+      correct:"d",
+    },
+    {
+      question: "¿Que pais acostumbra comer mucho Picante? ",
+      image:"quiz1.jpg",
+      a: "Estados Unidos",
+      b:"México",
+      c:"España",
+      d:"China",
+      correct:"b",
+    },
+    {
+      question: "¿Inicial de Tipo Fuego de Kanto?",
+      image:"quiz1.jpg",
+      a: "Squirtle",
+      b:"Charmander",
+      c:"Bulbasaur",
+      correct:"b",
+    },
+    {
+      question: "¿De que pueblo es Ash?",
+      image:"quiz1.jpg",
+      a: "Pueblo Paleta",
+      b:"Ciudad Verde",
+      c:"Ciudad Plateada",
+      d:"Ciuada Asafran",
+      correct:"a",
+    },
+    {
+      question: "¿Cual es la forma Final de Squirtle?",
+      image:"quiz1.jpg",
+      a: "Blastoise",
+      b:"Gyarados",
+      c:"Floatsel",
+      d:"Kingler",
+      correct:"a",
+    },
+    {
+      question: " ¿Como se llama el segundo Hijo de Goku?",
+      image:"quiz1.jpg",
+      a: "Gohan",
+      b:"Trunks",
+      c:"Goten",
+      d:"Bra",
+      correct:"c",
+    },
+    {
+      question: "¿Que tienen en comun el primer hijo de Goku y su Abuelo?",
+      image:"quiz1.jpg",
+      a: "La ropa",
+      b:"El nombre",
+      c:"La cara",
+      d:"La actitud",
+      correct:"b",
+    },
+    {
+      question: "¿Que tipo es eficas contra el Fantasma?",
+      image:"quiz1.jpg",
+      a: "Fantasma",
+      b:"Normal",
+      c:"Tierra",
+      d:"Fuego",
+      correct:"a",
+    },
+    {
+      question: "Quien es el pokemon dios?",
+      image:"quiz1.jpg",
+      a: "Arceus",
+      b:"Groudon",
+      c:"Rayquasa",
+      d:"Mew",
+      correct:"a",
+    },
+    {
+      question: "¿Como se llamo el primer juego de Pokemon?",
+      image:"quiz1.jpg",
+      a: "Pokemon Rojo",
+      b:"Pokemon PLatino",
+      c:"Pokemon Zafiro",
+      d:"Pokemon Esmeralda",
+      correct:"a",
+    },
+    {
+      question: "¿Quien es Gogeta?",
+      image:"quiz1.jpg",
+      a: "Una fusion",
+      b:"Un humano",
+      c:"Un demonio",
+      d:"Un dios",
+      correct:"a",
+    },
+    {
+      question: "¿Que estatus tiene Bills?",
+      image:"quiz1.jpg",
+      a: "Guerrero",
+      b:"Mortal",
+      c:"Campesino",
+      d:"Dios",
+      correct:"d",
+    },
+    {
+      question: "¿Quien es Kamisama?",
+      image:"quiz1.jpg",
+      a: "El dios de la tierra",
+      b:"Un humano",
+      c:"Un guerrero",
+      d:"Un mortal",
+      correct:"a",
+    },
+    {
+      question: " ¿Quien fue el primer Super Sajayin segun el anime?",
+      image:"quiz1.jpg",
+      a: "Broly",
+      b:"goku",
+      c:"Vegeta",
+      d:"Mr.Satan",
+      correct:"b",
+    },
+    {
+      question: "Quien gana en una pelea de los siguientes personajes?",
+      image:"quiz1.jpg",
+      a: "Superman",
+      b:"goku",
+      c:"Batman",
+      d:"Dios",
+      correct:"d",
+    },
+    {
+      question: "¿A quien se le apoda el Hombre de Acero?",
+      image:"quiz1.jpg",
+      a: "Superman",
+      b:"goku",
+      c:"Batman",
+      d:"Dios",
+      correct:"a",
+    },
+    {
+      question: "¿Quien es el mejor detective de estos 4?",
+      image:"quiz1.jpg",
+      a: "Superman",
+      b:"goku",
+      c:"Batman",
+      d:"Yamcha",
+      correct:"c",
+    },
+    ];
+    const quiz = document.getElementById('quiz');
+    const answerEls=document.querySelectorAll('.answer');
+    const questionEl =document.getElementById('question');
+    //dependiendo del número de repuestas esto puede incrementar
+    const a_text=document.getElementById('a_text');
+    const b_text=document.getElementById('b_text');
+    const c_text=document.getElementById('c_text');
+    const d_text=document.getElementById('d_text');
+const submitBtn=document.getElementById('submit');
+let currentQuiz=0; //esta variable nos va a servir para realizar el seguimiento de ma pregunta 
+let score= 0; // esta variable realiza el siguiente del puntaje del usuario
+
+loadQuiz(); //va a cargar la primera pregunta del cuestionario
+function loadQuiz(){
+  deselectAnswers();
+  const currentQuizData= quizData[currentQuiz];// obtuene los datos de la pregunta actual
+
+  questionEl.innerText = currentQuizData.question; //muestra la pregunta actual en el elemento html correspondiente 
+
+  a_text.innerText = currentQuizData.a; //muestra la opción de la respuesta A en el elemento html correspondiente 
+
+  b_text.innerText = currentQuizData.b; //muestra la opción de la respuesta B en el elemento html correspondiente 
+
+  c_text.innerText = currentQuizData.c; //muestra la opción de la respuesta C en el elemento html correspondiente
+
+ d_text.innerText = currentQuizData.d; //muestra la opción de la respuesta D en el elemento html correspondiente 
+ const questionImage = document.getElementById("question-image");
+ questionImage.src=currentQuizData.image;
+}
+function deselectAnswers(){
+  answerEls.forEach(answerEl => answerEl.checked= false); //desenmarca todas las casillas de verificación de respuesta.
+}
+function getSelected(){
+  let answer;
+  answerEls.forEach(answerEl => {
+    if(answerEl.checked){
+      answer = answerEl.id; //en esta parte obtienes ms opcion de la respuesta selecgionafs por el usuario 
+    }
+  });
+  return answer; //devuelve la opción de la respuesta seccionsda.
+}
+submitBtn.addEventListener('click',() =>{
+  const answer = getSelected(); //obtiene la opcion del a respuesta selecionada por el usuario 
+  if (answer){
+  if(answer === quizData[currentQuiz].correct){
+    score++; //incrementara el puntaje de las respuestas correctas 
+  }
+  currentQuiz++; //incrementa
+  if(currentQuiz < quizData.length){
+    loadQuiz();
+  } else{
+    quiz.innerHTML=`
+    <h2>Constestaste ${score}/${quizData.length} de preguntas correctamente </h2>
+    
+    <button onclick="location.reload()">Reload</button>
+    `
+  }
+  }
+})
+</script>
+
+<footer>
+    <center>
+    <div class="copyrigth">
+        <p>&copy;<span id="year">Derechos reservados.</span></p>
+    
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <a href="perfil.html">CONTACTAME</a>
+        <p>Si estas interesado en contactarme, puedes hacerlo a travez de cualquiera de las siguientes redes sociales.</p>
+        <p>Podras contactarme en cualquiera de estas apps:</p>
+        <p>Agregando solo un poco mas de informacion para que el texto se vea mucho mas ya que no se que mas agregarle...</p>
+        <div class="contact-links">
+        <a href="https://www.facebook.com/Sol_VC" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/miperfil" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com/miperfil" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.discord.com/miperfil" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://www.twitch.com/miperfil" target="_blank"><i class="fab fa-twitch"></i></a>
+        </div>
+    </center>
+    
+    
+    
+    <script>
+    const redessociales=document.querySelectorAll('.contact-links');
+    redessociales.forEach(link =>{
+      link.addEventListener('click', e=>{
+      e.preventDefault();
+      window.open(link.href, '_blank');
+    });
+    });
+
+</body>
+</html>

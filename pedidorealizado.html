@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/thunderstrike" rel="stylesheet">
+    <link rel="stylesheet" href="stylePedido.css">
+    <link rel="stylesheet" href="footerCuestionario.css">
+  <title>Cuestionario</title>
+</head>
+<body>
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-inverse navbar-stick-static-top">
+            <div class="container">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="inicio.html">Inicio</a>
+          </li>
+          <li>
+              <a href="menu.html">Menu</a>
+          </li>
+          <li>
+              <li>
+              <a href="formulario.html">Formulario</a>
+          </li>
+          <li>
+              <a href="pedidorealizado.html">Resultado</a>
+          </li>
+          <li>
+            <a href="movies.html">Buscador de Peliculas</a>
+        </li>
+        <li>
+          <a href="calculadora.html">Calculadora</a>
+        </li>
+        <li>
+          <a href="Calc.Fisica.html">Fisica</a>
+        </li>
+        <li>
+         <a href="cuestionario.html">Cuestionario</a> 
+        </li>
+             </ul>
+            </div>
+        </nav>
+    </div>
+    <h1>Pedido Realizado</h1>
+    <h3>Con exito</h3>
+    <ul>
+        <li><strong>Nombre: </strong> <span id="nombre"></span></li>
+        <li><strong>Apellido: </strong> <span id="apellido"></span></li>
+        <li><strong>Telefono: </strong> <span id="telefono"></span></li>
+        <li><strong>Direccion: </strong> <span id="direccion"></span></li>
+        <li><strong>Colonia: </strong> <span id="colonia"></span></li>
+        <li><strong>Menu:    </strong> <span id="menu"> </span></li>
+        <li><strong>Queso: </strong> <span id="queso"></span></li>
+        <li><strong>Doble Carne: </strong> <span id="DobleCarne"></span></li>
+        <li><strong>Lechuga: </strong> <span id="lechuga"></span></li>
+        <li><strong>Tomate: </strong> <span id="tomate"></span></li>
+        <li><strong>Aguacate: </strong> <span id="aguacate"></span></li>
+        <li><strong>Malteada De Fresa: </strong> <span id="MalteadaDeFresa"></span></li>
+        <li><strong>Flan: </strong> <span id="Flan"></span></li>
+        <li><strong>Pay De Queso: </strong> <span id="PayDeQueso"></span></li>
+        <li><strong>Carlota de Oreo: </strong> <span id="CarlotaDeOreo"></span></li>
+    </ul>
+    <script>
+        const orden=JSON.parse(localStorage.getItem("orden"));
+        document.getElementById("nombre").textContent=orden.nombre;
+        document.getElementById("apellido").textContent=orden.apellido;
+        document.getElementById("telefono").textContent=orden.telefono;
+        document.getElementById("direccion").textContent=orden.direccion;
+        document.getElementById("colonia").textContent=orden.colonia;
+        document.getElementById("menu").textContent=orden.menu;
+        document.getElementById("queso").textContent=orden.queso;
+        document.getElementById("DobleCarne").textContent=orden.DobleCarne;
+        document.getElementById("lechuga").textContent=orden.lechuga;
+        document.getElementById("tomate").textContent=orden.tomate;
+        document.getElementById("aguacate").textContent=orden.aguacate;
+        document.getElementById("MalteadaDeFresa").textContent=orden.MalteadaDeFresa;
+        document.getElementById("Flan").textContent=orden.Flan;
+        document.getElementById("PayDeQueso").textContent=orden.PayDeQueso;
+        document.getElementById("CarlotaDeOreo").textContent=orden.CarlotaDeOreo;
+    </script>
+
+<footer>
+  <center>
+   <div class="copyrigth">
+       <p>&copy;<span id="year">Derechos reservados.</span></p>
+   
+       <i class="fa fa-facebook" aria-hidden="true"></i>
+       <a href="perfil.html">CONTACTAME</a>
+       <p>Si estas interesado en contactarme, puedes hacerlo a travez de cualquiera de las siguientes redes sociales.</p>
+       <p>Podras contactarme en cualquiera de estas apps:</p>
+       <p>Agregando solo un poco mas de informacion para que el texto se vea mucho mas ya que no se que mas agregarle...</p>
+       <div class="contact-links">
+       <a href="https://www.facebook.com/Sol_VC" target="_blank"><i class="fab fa-facebook"></i></a>
+       <a href="https://www.instagram.com/miperfil" target="_blank"><i class="fab fa-instagram"></i></a>
+       <a href="https://www.twitter.com/miperfil" target="_blank"><i class="fab fa-twitter"></i></a>
+       <a href="https://www.discord.com/miperfil" target="_blank"><i class="fab fa-discord"></i></a>
+       <a href="https://www.twitch.com/miperfil" target="_blank"><i class="fab fa-twitch"></i></a>
+       </div>
+   </center>
+
+
+
+<script>
+//este siguiente codigo es para que los enlaces se abran en una nueva pestaña
+const redessociales= document.querySelectorAll('.contact-links');
+redessociales.forEach(link =>{
+   link.addEventListener('click', e => {
+       e.preventDefault();
+       window.open(link.href, '_blank');
+   });
+});
+
+</body>
+</html>
