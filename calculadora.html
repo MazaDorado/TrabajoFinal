@@ -92,5 +92,35 @@
         back.value=back.value.slice(0,-1);
     }
 </script> 
+
+  <footer>
+    <center>
+    <div class="copyrigth">
+        <p>&copy;<span id="year">Derechos reservados.</span></p>
+    
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <a href="perfil.html">CONTACTAME</a>
+        <p>Si estas interesado en contactarme, puedes hacerlo a travez de cualquiera de las siguientes redes sociales.</p>
+        <p>Podras contactarme en cualquiera de estas apps:</p>
+        <p>Agregando solo un poco mas de informacion para que el texto se vea mucho mas ya que no se que mas agregarle...</p>
+        <div class="contact-links">
+        <a href="https://www.facebook.com/Sol_VC" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/miperfil" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com/miperfil" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.discord.com/miperfil" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://www.twitch.com/miperfil" target="_blank"><i class="fab fa-twitch"></i></a>
+        </div>
+    </center>
+    
+    
+    
+    <script>
+    const redessociales=document.querySelectorAll('.contact-links');
+    redessociales.forEach(link =>{
+      link.addEventListener('click', e=>{
+      e.preventDefault();
+      window.open(link.href, '_blank');
+    });
+    });
   </body>
   </html>
